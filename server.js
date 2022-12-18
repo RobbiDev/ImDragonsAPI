@@ -35,8 +35,8 @@ app.get('/api/imaginedragonsjs/data/:jsonEntry', (req, res) => {
     }
 
     if (dataEntries.indexOf(entry) > -1) {
-        res.status(200).send( response )
+        res.status(200).send(response)
     } else {
-        res.status(404).send({ message: `No Such Data Entry could be found.`})
+        res.status(404).send({ message: `No Such Data Entry could be found.` })
     }
 })
