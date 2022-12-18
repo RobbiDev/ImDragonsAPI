@@ -11,21 +11,24 @@ const dataEntries = ["band", "album", "songlist"]
 // Use Express 
 app.use(express.json())
 
-app.listen(
-    PORT,
-    () => console.log(`Im alive on http://localhost:${PORT}`)
-)
+app.get('/', (req, res) => {
+    res.status(200).send(
+        JSON.stringify({
+            message: 'Route Not Found: Please use the api/imaginejs endpoint',
+        })
+    )
+})
 
 // Get Request
-app.get('/api/imaginedragonsjs', (req, res) => {
+app.get('/api/imaginejs', (req, res) => {
     res.status(200).send("Welcome to the Imaginedragons.js API")
 })
 
-app.get('/api/imaginedragonsjs/data', (req, res) => {
+app.get('/api/imaginejs/data', (req, res) => {
     res.status(200).send({ band, songlist })
 })
 
-app.get('/api/imaginedragonsjs/data/:jsonEntry', (req, res) => {
+app.get('/api/imaginejs/data/:jsonEntry', (req, res) => {
 
     const entry = req.params.jsonEntry
     const response = require(`./data/${entry}.json`)
@@ -40,3 +43,8 @@ app.get('/api/imaginedragonsjs/data/:jsonEntry', (req, res) => {
         res.status(404).send({ message: `No Such Data Entry could be found.` })
     }
 })
+
+app.listen(
+    PORT,
+    () => console.log(`Server Started on ${PORT}`)
+)
