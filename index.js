@@ -1,36 +1,42 @@
+// Server Constants
 const express = require('express');
 const app = express()
-const PORT = 8080;
+const PORT = 8080
 
-app.use( express.json() )
+// Data Access Constants
+const band = require('./data/band.json')
+const songlist = require('./data/songlist.json')
+const dataEntries = ["band", "album", "songlist"]
+
+// Use Express 
+app.use(express.json())
 
 app.listen(
     PORT,
-    () => console.log(`Im alive on https://localhost${PORT}`)
+    () => console.log(`Im alive on http://localhost:${PORT}`)
 )
 
-app.get('/tshirt', (req,res) => {
-    res.status(200).send({
-        "tshirt": "Bob Ducan",
-        "size": 'Large'
-    })
+// Get Request
+app.get('/api/imaginedragonsjs', (req, res) => {
+    res.status(200).send("Welcome to the Imaginedragons.js API")
 })
 
-app.post('/tshirt/:id', (req, res) => {
-
-    const { id } = req.params
-    const { logo } = req.body
-
-    if (!id) {
-        res.status(418).send({ message: 'Need a ID'})
-    }
-
-    if (!logo) {
-        res.status(418).send({ message: 'We need a logo!'})
-    }
-
-    res.send({
-        tshirt: `With your ${logo} of a ID of ${id}`
-    })
+app.get('/api/imaginedragonsjs/data', (req, res) => {
+    res.status(200).send({ band, songlist })
 })
 
+app.get('/api/imaginedragonsjs/data/:jsonEntry', (req, res) => {
+
+    const entry = req.params.jsonEntry
+    const response = require(`./data/${entry}.json`)
+
+    if (!entry) {
+        res.status(418).send({ message: 'Needs a Data ID' })
+    }
+
+    if (dataEntries.indexOf(entry) > -1) {
+        res.status(200).send( response )
+    } else {
+        res.status(404).send({ message: `No Such Data Entry could be found.`})
+    }
+})
