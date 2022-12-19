@@ -4,8 +4,8 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Data Access Constants
-const band = require('./data/band.json')
-const songlist = require('./data/songlist.json')
+const band = require('./api/data/band.json')
+const songlist = require('./api/data/songlist.json')
 const dataEntries = ["band", "album", "songlist"]
 
 // Use Express 
@@ -14,21 +14,21 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.status(200).send(
         JSON.stringify({
-            message: 'Route Not Found: Please use the api/imaginejs endpoint',
+            message: 'Route Not Found: Please use the /imaginejs endpoint',
         })
     )
 })
 
 // Get Request
-app.get('/api/imaginejs', (req, res) => {
-    res.status(200).send("Welcome to the Imaginedragons.js API")
+app.get('/imaginejs', (req, res) => {
+    res.status(200).send("Welcome to the Imaginedragons.js API.")
 })
 
-app.get('/api/imaginejs/data', (req, res) => {
+app.get('/imaginejs/data', (req, res) => {
     res.status(200).send({ band, songlist })
 })
 
-app.get('/api/imaginejs/data/:jsonEntry', (req, res) => {
+app.get('/imaginejs/data/:jsonEntry', (req, res) => {
 
     const entry = req.params.jsonEntry
     const response = require(`./data/${entry}.json`)
@@ -46,5 +46,5 @@ app.get('/api/imaginejs/data/:jsonEntry', (req, res) => {
 
 app.listen(
     PORT,
-    () => console.log(`Server Started on ${PORT}`)
+    () => console.log(`Server running at https://api.unnecessarylibraries.com/`)
 )
