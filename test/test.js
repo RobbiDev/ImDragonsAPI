@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const response = await fetch('https://testapi-kzll.onrender.com/api/imaginejs/data/band');
-const data = await response.json();
+const response = await fetch('https://api.unnecessarylibraries.com/');
+const data = await response
 
 console.log(data);
