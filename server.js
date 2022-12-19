@@ -31,7 +31,7 @@ app.get('/imaginejs/data', (req, res) => {
 app.get('/imaginejs/data/:jsonEntry', (req, res) => {
 
     const entry = req.params.jsonEntry
-    const response = require(`./data/${entry}.json`)
+    const response = require(`./api/data/${entry}.json`)
 
     if (!entry) {
         res.status(418).send({ message: 'Needs a Data ID' })
