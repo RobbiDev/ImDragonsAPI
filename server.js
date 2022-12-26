@@ -38,7 +38,8 @@ app.get('/imaginejs/data/:jsonEntry', (req, res) => {
     }
 
     if (dataEntries.indexOf(entry) > -1) {
-        res.status(200).send(response)
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(response)
     } else {
         res.status(404).send({ message: `No Such Data Entry could be found.` })
     }
