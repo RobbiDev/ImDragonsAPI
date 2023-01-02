@@ -35,6 +35,7 @@ app.get(`/${apiName}/data`, (req, res) => {
     res.status(200).send({ band, songs })
 })
 
+// Find JSON Data by Entry
 app.get(`/${apiName}/data/:jsonEntry`, (req, res) => {
 
 
@@ -49,7 +50,6 @@ app.get(`/${apiName}/data/:jsonEntry`, (req, res) => {
     } else {
         res.status(404).send({ message: `No Such Data route could be found. Please Look back at available routes` })
     }
-
 
 })
 
