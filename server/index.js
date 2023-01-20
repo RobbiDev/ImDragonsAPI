@@ -1,16 +1,25 @@
 // Use Express
 const express = require('express');
 const app = express()
-
+// JSON Middleware
 app.use(express.json())
 
-const test = require("./api/template.js");
+const custom = require("./api/custom/custom.js");
 
-// // Imports
+// File Importer
+function file(x) {
+
+    let file = require(`./api/${x}.js`)
+
+    if (x === x) {
+        return file
+    }
+}
+
+// Imports
 const config = require('./config.json')
 const apiName = config.apiName
 const apiEntries = config.entries
-const process = require('process')
 
 // Remove Headers
 app.use(function (req, res, next) {
@@ -22,48 +31,10 @@ app.use(function (req, res, next) {
 })
 
 // test route
-app.use("/test", test);
+app.use(`/${apiName}/v1/`, file("template"));
 
 // Custom Request Handler
-app.post(`/${apiName}/v1/custom/`, function (req, res) {
-    
-    // Variables
-    let msg = "Missing"
-    const cat = req.body.category || msg
-    const type = req.body.contentType || msg
-    const entry = req.body.content || msg
-
-    // Error Object
-    class ResObj {
-        constructor() {
-            this.ERROR = "404: Missing Values are not specified"
-            this.SENT = {
-                'Category': cat,
-                'Content-Type': type,
-                'Target Content': entry
-            }
-        }
-    }
-
-    // Initiate Error Object
-    let obj = new ResObj
-
-    // Check if values are specified
-    if (apiEntries.category.includes(cat) && apiEntries.type.includes(type) && apiEntries.contents.includes(entry) == true) {
-        // URL Constructor
-        const file = require(`../api/data/${cat}/${type}/${entry}.json`)
-        // Send URL
-        res.status(200).json(file)
-    } else if (cat == msg || type == msg || entry == msg) {
-        // Error
-        obj.ERROR = "404: Missing Values are not specified"
-        res.status(404).send(obj)
-    } else {
-        // Error
-        obj.ERROR = "404: Specified values don't exist or spelt wrong"
-        res.status(404).send(obj)
-    }
-})
+app.use(`/${apiName}/v1/custom`, custom);
 
 // GET Collections Types
 // Ex: /imdragons/v1/collection
