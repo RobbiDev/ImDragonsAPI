@@ -4,20 +4,13 @@ const app = express()
 // JSON Middleware
 app.use(express.json())
 
+
+
 const custom = require("./api/custom/custom.js");
-
-// File Importer
-function file(x) {
-
-    let file = require(`./api/${x}.js`)
-
-    if (x === x) {
-        return file
-    }
-}
 
 // Imports
 const config = require('./config.json')
+const file = require('./fileBuilder.js')
 const apiName = config.apiName
 const apiEntries = config.entries
 
@@ -30,37 +23,11 @@ app.use(function (req, res, next) {
     next()
 })
 
-// test route
-app.use(`/${apiName}/v1/`, file("template"));
-
 // Custom Request Handler
-app.use(`/${apiName}/v1/custom`, custom);
+app.use(`/${apiName}/v1/custom`, file("custom", "custom"));
 
 // GET Collections Types
-// Ex: /imdragons/v1/collection
-app.get(`/${apiName}/v1/:category/`, (req, res) => {
-
-    const cat = req.params.category.toLowerCase()
-
-    if (apiEntries.category.includes(cat) == true) {
-
-        const file = {
-            "content-types": [
-                "lists", "individuals"
-            ],
-            "Examples": {
-                "Album list": "/imdragons/v1/collection/list/album",
-                "Song list": "/imdragons/v1/collection/list/song"
-            }
-        }
-
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(file)
-    } else {
-        res.status(404).send({ message: `No Such Data route could be found. Please Look back at available routes` })
-    }
-
-})
+app.use(`/${apiName}/v1/collection/`, file("collection", "main"))
 
 // GET Content-Types within Collections
 // Ex: /imdragons/v1/collection

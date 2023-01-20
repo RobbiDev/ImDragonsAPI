@@ -1,4 +1,4 @@
-// Template File for Custom Routes
+// Express / Router
 const express = require('express')
 const router = express.Router()
 // Variables
@@ -10,22 +10,22 @@ const apiEntries = config.entries
 router.use(express.json())
 
 // Custom Request Handler
-router.post(`/`, function (req, res) {
-    
+router.get(`/`, function (req, res) {
+
     // Variables
     let msg = "Missing"
     const cat = req.body.category || msg
-    const type = req.body.contentType || msg
+    const type = req.body['content-type'] || msg
     const entry = req.body.content || msg
 
     // Error Object
     class ResObj {
         constructor() {
             this.ERROR = "404: Missing Values are not specified"
-            this.SENT = {
+            this.REQUEST = {
                 'Category': cat,
                 'Content-Type': type,
-                'Target Content': entry
+                'Targeted-Content': entry
             }
         }
     }
@@ -36,16 +36,16 @@ router.post(`/`, function (req, res) {
     // Check if values are specified
     if (apiEntries.category.includes(cat) && apiEntries.type.includes(type) && apiEntries.contents.includes(entry) == true) {
         // URL Constructor
-        const file = require(`../api/data/${cat}/${type}/${entry}.json`)
+        const file = require(`../../db/${cat}/${type}/${entry}.json`)
         // Send URL
         res.status(200).json(file)
     } else if (cat == msg || type == msg || entry == msg) {
         // Error
-        obj.ERROR = "404: Missing Values are not specified"
-        res.status(404).send(obj)
+        obj.ERROR = "400: The given values don't exist or request doesnt contain a body"
+        res.status(400).send(obj)
     } else {
         // Error
-        obj.ERROR = "404: Specified values don't exist or spelt wrong"
+        obj.ERROR = "404: Values are not specified or spelt wrong"
         res.status(404).send(obj)
     }
 })
