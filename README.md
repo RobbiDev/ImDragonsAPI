@@ -8,6 +8,9 @@ https://api.unnecessarylibraries.com/imdragons/v1/
 ## Current Version
 v1.1.1
 
+## Documentation
+https://docs.unnecessarylibraries.com/
+
 ## Gitignore
 - node-modules
 - package-lock.json
