@@ -1,13 +1,13 @@
 // Express / Router
 const express = require('express')
 const router = express.Router()
+// Middleware
+router.use(express.json())
+
 // Variables
 const config = require('../../config.json')
 const apiName = config.apiName
 const apiEntries = config.entries
-
-// Middleware
-router.use(express.json())
 
 // Custom Request Handler
 router.get(`/`, function (req, res) {

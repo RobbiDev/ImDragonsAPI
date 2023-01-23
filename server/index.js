@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 // Maintenance Mode
 if (config.maintenance === true) {
     app.get(`*`, (req, res) => {
-            res.status(503).send({ maintenance: `Server currently down for maintenance` })
+        res.status(503).send({ maintenance: `Server currently down for maintenance` })
     })
 }
 
