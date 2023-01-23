@@ -1,8 +1,8 @@
 {
     "version": "v1",
-    "maintenance": false,
+    "maintenance": true,
     "env": {
-        "stage": true,
+        "stage": false,
         "name": "staging Envoirment" 
     },
     "PORT": 5000,
