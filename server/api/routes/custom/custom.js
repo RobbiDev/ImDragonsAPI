@@ -36,7 +36,7 @@ router.get(`/`, function (req, res) {
     // Check if values are specified
     if (apiEntries.category.includes(cat) && apiEntries.type.includes(type) && apiEntries.contents.includes(entry) == true) {
         // URL Constructor
-        const file = require(`../../db/${cat}/${type}/${entry}.json`)
+        const file = require(`../../../db/${cat}/${type}/${entry}.json`)
         // Send URL
         res.status(200).json(file)
     } else if (cat == msg || type == msg || entry == msg) {
