@@ -38,7 +38,7 @@ app.listen(config.PORT, () => {
     if (config.env.stage == true) {
         console.log(`Server is in Staging Mode and is running on http://localhost:${config.PORT}`)
     } else {
-        console.warn(`WARNING: Server is in PRODUCTION Mode! All changes will be live immediately`)
-        console.log(`Server is in PRODUCTION Mode and is running on https://api.unnecessarylibraries.com/imdragons/`)
+        console.warn(`WARNING: Server is in PRODUCTION Mode! All changes will be alive immediately`)
+        console.log(`Server is in PRODUCTION Mode and is running on https://api.unnecessarylibraries.com/imdragons/v1/`)
     }
 })
