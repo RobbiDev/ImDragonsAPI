@@ -1,15 +1,12 @@
 // Express / Router
 const express = require('express')
 const router = express.Router()
-
-// Import Configuration
-const config = require('../../config.json')
-
-// Imports
-const apiEntries = config.entries
-
 // Middleware
 router.use(express.json())
+
+// Variables
+const config = require('../../config.json')
+const apiEntries = config.entries
 
 // Request Handler
 router.get('/', (req, res) => {
@@ -31,8 +28,7 @@ router.get('/', (req, res) => {
 
 router.get(`/:contentType`, (req, res) => {
 
-    const cat = req.params.category.toLowerCase()
-    const type = req.params.contentType.toLowerCase()
+    const cat = req.params.contentType.toLowerCase()
 
     if (apiEntries.category.includes(cat) == true) {
 
