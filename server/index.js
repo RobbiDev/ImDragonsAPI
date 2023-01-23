@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 // Maintenance Mode
 if (config.maintenance === true) {
     app.get(`*`, (req, res) => {
-            res.status(503).send({ maintenance: `Server currently down for maintenance` })
+        res.status(503).send({ maintenance: `Server currently down for maintenance` })
     })
 }
 
@@ -35,8 +35,10 @@ app.use(`/${apiName}/v1/collection/`, builder("collection", "main"))
 // App Listen
 app.listen(config.PORT, () => {
     // If in Staging Mode
-    if (config.env.stage == true) return console.log(`Server is in Staging Mode and is running on localhost:${config.PORT}`) 
-    // If not in Staging Mode
-    console.warn(`WARNING: Server is in PRODUCTION Mode! All changes will be alive immediately`)
-    console.log(`Server is in PRODUCTION Mode and is running on https://api.unnecessarylibraries.com/imdragons/`)
+    if (config.env.stage == true) {
+        console.log(`Server is in Staging Mode and is running on http://localhost:${config.PORT}`)
+    } else {
+        console.warn(`WARNING: Server is in PRODUCTION Mode! All changes will be live immediately`)
+        console.log(`Server is in PRODUCTION Mode and is running on https://api.unnecessarylibraries.com/imdragons/`)
+    }
 })
