@@ -1,8 +1,8 @@
 ## ImDragonsAPI Route
 https://api.unnecessarylibraries.com/imdragons/v1/
 
-## Version
-v1.0.0
+## Current Version
+v1.1.0
 
 ## Example Rotes
 
