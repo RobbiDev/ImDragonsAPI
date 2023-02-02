@@ -5,7 +5,7 @@ const router = express.Router()
 router.use(express.json())
 
 // Variables
-const config = require('../../config.json')
+const config = require('../config.json')
 const apiName = config.apiName
 const apiEntries = config.entries
 

@@ -27,10 +27,10 @@ if (config.maintenance === true) {
 }
 
 // Custom Request Handler
-app.use(`/${apiName}/v1/custom`, builder("custom", "custom"));
+app.use(`/${apiName}/v1/public`, builder("main"));
 
 // GET Collections Types
-app.use(`/${apiName}/v1/collection/`, builder("collection", "main"))
+// app.use(`/${apiName}/v1/private/`, builder("main"))
 
 // App Listen
 app.listen(config.PORT, () => {
