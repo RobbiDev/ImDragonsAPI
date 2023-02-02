@@ -24,38 +24,31 @@ router.get(`/:content`, (req, res) => {
 
 })
 
-router.get(`/album/:id`, (req, res) => {
+router.get(`/album/:album`, (req, res) => {
    
-    const targetAlbum = req.params.id
+    const targetedAlbum = req.params.album
 
     const file = require(`../../db/album.json`)
     const result = file.ALBUM_LIST.find((album) => {
-        return album.title == targetAlbum || album.id == targetAlbum 
+        return album.title == targetedAlbum || album.id == targetedAlbum 
     })
     
-    if (result == undefined) {
-        Error(res, 404)
-    } else {
-        Send(res, 202, result)
-    }
+    if (result == undefined) return Error(res, 404)
+
+    Send(res, 202, result)
 
 })
 
-router.get(`/band/:id`, (req, res) => {
+router.get(`/band/:content`, (req, res) => {
    
-    const targetAlbum = req.params.id
-    const file = require(`../../db/album.json`)
-
-    // Get Album from a ID or Album Name
-    const albumByID = file.ALBUM_LIST.find((album) => {
-        return album.title == targetAlbum || album.id == targetAlbum 
-    })
+    const targetedContent = req.params.content
+    let ContentType = require(`../../db/band.json`).BAND_INFO
+    let subContent = Object.keys(ContentType)
+    // Error Handling
+    if (subContent.indexOf(targetedContent) == -1) return Error(res, 404)
     // Response Handler
-    if (albumByID == undefined) {
-        Error(res, 404)
-    } else {
-        Send(res, 202, albumByID)
-    }
+    let subContentProps = Object.getOwnPropertyDescriptor(ContentType, targetedContent).value
+    Send(res, 202, subContentProps)
 
 })
 
