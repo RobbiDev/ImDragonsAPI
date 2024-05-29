@@ -1,57 +1,77 @@
-// Express / Router
-const express = require('express')
-const router = express.Router()
-// Middleware
-router.use(express.json())
+// Importing required modules
+const express = require('express');
+const router = express.Router();
+const config = require('../config.json');
+const { Error, Send } = require('../util/ResponseHandler');
+const entries = config.contents;
 
-// Variables
-const config = require('../config.json')
-const entries = config.contents
-const { Error, Send } = require('../util/ResponseHandler')
+// Middleware to parse JSON bodies
+router.use(express.json());
 
-router.get(`/:content`, (req, res) => {
+/**
+ * @route GET /:content
+ * @desc Get content by name
+ * @access Public
+ */
+router.get('/:content', (req, res) => {
+    const content = req.params.content.toLowerCase();
 
-    const content = req.params.content.toLowerCase()
-
-    if (entries.includes(content) == true) {
-
-        const file = require(`../../db/${content}.json`)
-        Send(res, 200, file)
-
+    if (entries.includes(content)) {
+        try {
+            const file = require(`../../db/${content}.json`);
+            Send(res, 200, file);
+        } catch (err) {
+            Error(res, 500, 'Internal server error');
+        }
     } else {
-        Error(res, 404)
+        Error(res, 404, 'Content not found');
     }
+});
 
-})
+/**
+ * @route GET /album/:album
+ * @desc Get album by title or ID
+ * @access Public
+ */
+router.get('/album/:album', (req, res) => {
+    const targetedAlbum = req.params.album;
 
-router.get(`/album/:album`, (req, res) => {
-   
-    const targetedAlbum = req.params.album
+    try {
+        const file = require(`../../db/album.json`);
+        const result = file.ALBUM_LIST.find(album => album.title === targetedAlbum || album.id === targetedAlbum);
 
-    const file = require(`../../db/album.json`)
-    const result = file.ALBUM_LIST.find((album) => {
-        return album.title == targetedAlbum || album.id == targetedAlbum 
-    })
-    
-    if (result == undefined) return Error(res, 404)
+        if (!result) {
+            return Error(res, 404, 'Album not found');
+        }
 
-    Send(res, 202, result)
+        Send(res, 202, result);
+    } catch (err) {
+        Error(res, 500, 'Internal server error');
+    }
+});
 
-})
+/**
+ * @route GET /band/:content
+ * @desc Get band information by content key
+ * @access Public
+ */
+router.get('/band/:content', (req, res) => {
+    const targetedContent = req.params.content;
 
-router.get(`/band/:content`, (req, res) => {
-   
-    const targetedContent = req.params.content
-    let ContentType = require(`../../db/band.json`).BAND_INFO
-    let subContent = Object.keys(ContentType)
-    // Error Handling
-    if (subContent.indexOf(targetedContent) == -1) return Error(res, 404)
-    // Response Handler
-    let subContentProps = Object.getOwnPropertyDescriptor(ContentType, targetedContent).value
-    Send(res, 202, subContentProps)
+    try {
+        const ContentType = require(`../../db/band.json`).BAND_INFO;
+        const subContent = Object.keys(ContentType);
 
-})
+        if (!subContent.includes(targetedContent)) {
+            return Error(res, 404, 'Content not found');
+        }
 
-// Export
-module.exports = router
+        const subContentProps = ContentType[targetedContent];
+        Send(res, 202, subContentProps);
+    } catch (err) {
+        Error(res, 500, 'Internal server error');
+    }
+});
 
+// Exporting the router
+module.exports = router;

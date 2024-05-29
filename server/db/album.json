@@ -2,7 +2,7 @@
     "ALBUM_LIST": [
         {
             "id": "0",
-            "title": "Night-Visions",
+            "title": "Night Visions",
             "length": "42:10",
             "recorded": "2009 - July 2012",
             "label": [
@@ -11,10 +11,10 @@
             ],
             "genre": [
                 "Alternative rock",
-                "Pop Rock",
-                "Synth Rock",
+                "Pop rock",
+                "Synth rock",
                 "Rock",
-                "Synth Pop",
+                "Synth pop",
                 "Pop"
             ],
             "released": "September 4, 2012",
@@ -27,7 +27,7 @@
                 "Tiptoe",
                 "It's Time",
                 "Demons",
-                "On Top Of The World",
+                "On Top of the World",
                 "Amsterdam",
                 "Hear Me",
                 "Every Night",
@@ -50,10 +50,10 @@
             ],
             "genre": [
                 "Alternative rock",
-                "Pop Rock",
-                "Synth Rock",
+                "Pop rock",
+                "Synth rock",
                 "Rock",
-                "Synth Pop",
+                "Synth pop",
                 "Pop"
             ],
             "released": "February 17, 2015",
@@ -69,7 +69,7 @@
                 "I Bet My Life",
                 "Polaroid",
                 "Friction",
-                "It Comes Back To You",
+                "It Comes Back to You",
                 "Dream",
                 "Trouble",
                 "Summer",
@@ -88,10 +88,10 @@
             ],
             "genre": [
                 "Alternative rock",
-                "Pop Rock",
-                "Synth Rock",
+                "Pop rock",
+                "Synth rock",
                 "Rock",
-                "Synth Pop",
+                "Synth pop",
                 "Pop"
             ],
             "released": "June 23, 2017",
@@ -103,19 +103,19 @@
                 "I Don't Know Why",
                 "Whatever It Takes",
                 "Believer",
-                "Walking The Wire",
+                "Walking the Wire",
                 "Rise Up",
-                "I'll Make It Up To You",
+                "I'll Make It Up to You",
                 "Yesterday",
-                "Mouth Of The River ",
+                "Mouth of the River",
                 "Thunder",
                 "Start Over",
-                "Dancing In The Dark"
+                "Dancing in the Dark"
             ]
         },
         {
             "id": "3",
-            "title": "Orgins",
+            "title": "Origins",
             "length": "52:00",
             "recorded": "Imagine Dragons Studio",
             "label": [
@@ -123,11 +123,11 @@
                 "KIDinaKORNER"
             ],
             "genre": [
-                "Alternative Pop",
-                "Pop Rock",
-                "Synth Rock",
-                "Electro Pop",
-                "Synth Pop"
+                "Alternative pop",
+                "Pop rock",
+                "Synth rock",
+                "Electropop",
+                "Synth pop"
             ],
             "released": "November 9, 2018",
             "producers": [
@@ -151,7 +151,7 @@
         },
         {
             "id": "4",
-            "title": "Mercury Act 1",
+            "title": "Mercury – Act 1",
             "length": "45:05",
             "recorded": "At Home Studios",
             "label": [
@@ -159,7 +159,10 @@
                 "KIDinaKORNER"
             ],
             "genre": "Alternative rock",
-            "release": "September 3, 2021",
+            "released": "September 3, 2021",
+            "producers": [
+                "Rick Rubin"
+            ],
             "tracks": [
                 "Enemy",
                 "My Life",
@@ -169,17 +172,17 @@
                 "#1",
                 "Easy Come Easy Go",
                 "Giants",
-                "It's Ok",
+                "It's OK",
                 "Dull Knives",
                 "Follow You",
                 "Cutthroat",
-                "No Time For Toxic People",
+                "No Time for Toxic People",
                 "One Day"
             ]
         },
         {
             "id": "5",
-            "title": "Mercury Act 2",
+            "title": "Mercury – Act 2",
             "length": {
                 "Standard": "54:19",
                 "Deluxe": "57:46"
@@ -190,7 +193,10 @@
                 "KIDinaKORNER"
             ],
             "genre": "Alternative rock",
-            "release": "July 1, 2022",
+            "released": "July 1, 2022",
+            "producers": [
+                "Rick Rubin"
+            ],
             "tracks": [
                 "Bones",
                 "Symphony",
@@ -203,7 +209,7 @@
                 "Waves",
                 "I'm Happy",
                 "Ferris Wheel",
-                "Peace Of Mind",
+                "Peace of Mind",
                 "Sirens",
                 "Tied",
                 "Younger",
@@ -218,9 +224,9 @@
             "recorded": "Battle Born Studios",
             "label": "Self-released",
             "genre": "Alternative rock",
-            "release": "2009-09-01",
+            "released": "September 1, 2009",
             "tracks": [
-                "I Need A Minute",
+                "I Need a Minute",
                 "Uptight",
                 "Cover Up",
                 "Curse",
@@ -230,26 +236,26 @@
         },
         {
             "id": "7",
-            "title": "Speak to Me",
-            "length": "17:95",
+            "title": "Speak to Me (EP)",
+            "length": "17:55",
             "label": "Self-released",
-            "release": "2008-09-11",
+            "released": "September 11, 2008",
             "tracks": [
-                "Pistol Whip ",
+                "Pistol Whip",
                 "Living Musical",
                 "The Pit",
-                "Speak To Me",
+                "Speak to Me",
                 "Boots"
             ]
         },
         {
             "id": "8",
-            "title": "Hell and Silence",
+            "title": "Hell and Silence (EP)",
             "length": "18:12",
             "recorded": "Battle Born Studios",
             "label": "Self-released",
             "genre": "Alternative rock",
-            "release": "June 1, 2010",
+            "released": "June 1, 2010",
             "tracks": [
                 "All Eyes",
                 "I Don't Mind",

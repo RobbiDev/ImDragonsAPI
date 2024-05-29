@@ -1,33 +1,140 @@
 {
-    "BAND_INFO": {
-        "details": {
-            "origin": "Las Vegas, Nevada, United States",
-            "genres": [
-                "Alternative rock",
-                "Indie rock",
-                "Electronic rock"
+    "details": {
+        "origin": "Las Vegas, Nevada, United States",
+        "genres": [
+            "Alternative rock",
+            "Indie rock",
+            "Electronic rock"
+        ],
+        "labels": [
+            "Interscope Records",
+            "KIDinaKORNER"
+        ],
+        "members": [
+            "Dan Reynolds",
+            "Wayne Sermon",
+            "Ben McKee",
+            "Daniel Platzman"
+        ],
+        "past_members": [
+            "Andrew Tolman",
+            "Brittany Tolman",
+            "Theron 'T' Thomas",
+            "Dave Lemke"
+        ],
+        "formation_year": 2008,
+        "active_years": "2008–present",
+        "associated_acts": [
+            "Egyptian",
+            "X Ambassadors"
+        ],
+        "awards": [
+            "Grammy Award for Best Rock Performance (2014)",
+            "American Music Award for Favorite Alternative Artist (2013)",
+            "Billboard Music Award for Top Duo/Group (2019)"
+        ],
+        "notable_songs": [
+            "Radioactive",
+            "Demons",
+            "Believer",
+            "Thunder",
+            "Whatever It Takes"
+        ],
+        "instrumentation": {
+            "lead_vocals": "Dan Reynolds",
+            "lead_guitar": "Wayne Sermon",
+            "bass_guitar": "Ben McKee",
+            "drums": "Daniel Platzman"
+        },
+        "discography": {
+            "studio_albums": [
+                {
+                    "title": "Night Visions",
+                    "release_date": "September 4, 2012",
+                    "certifications": [
+                        "Platinum (RIAA)",
+                        "Platinum (BPI)"
+                    ]
+                },
+                {
+                    "title": "Smoke + Mirrors",
+                    "release_date": "February 17, 2015",
+                    "certifications": [
+                        "Gold (RIAA)",
+                        "Gold (BPI)"
+                    ]
+                },
+                {
+                    "title": "Evolve",
+                    "release_date": "June 23, 2017",
+                    "certifications": [
+                        "Platinum (RIAA)",
+                        "Gold (BPI)"
+                    ]
+                },
+                {
+                    "title": "Origins",
+                    "release_date": "November 9, 2018",
+                    "certifications": [
+                        "Gold (RIAA)"
+                    ]
+                },
+                {
+                    "title": "Mercury – Act 1",
+                    "release_date": "September 3, 2021"
+                },
+                {
+                    "title": "Mercury – Act 2",
+                    "release_date": "July 1, 2022"
+                }
             ],
-            "labels": [
-                "Interscope Records",
-                "KIDinaKORNER"
+            "eps": [
+                {
+                    "title": "Imagine Dragons",
+                    "release_date": "September 1, 2009"
+                },
+                {
+                    "title": "Speak to Me",
+                    "release_date": "September 11, 2008"
+                },
+                {
+                    "title": "Hell and Silence",
+                    "release_date": "June 1, 2010"
+                }
             ],
-            "members": [
-                "Daniel Samardžić",
-                "Dan Reynolds",
-                "Ben McKee",
-                "Wayne Sermon",
-                "Daniel Platzman"
+            "singles": [
+                "It's Time",
+                "Radioactive",
+                "Demons",
+                "On Top of the World",
+                "I Bet My Life",
+                "Shots",
+                "Believer",
+                "Thunder",
+                "Whatever It Takes",
+                "Natural",
+                "Bad Liar",
+                "Follow You",
+                "Enemy"
             ]
         },
-        "socials": {
-            "twitter": "https://twitter.com/Imaginedragons",
-            "youtube": "https://www.youtube.com/channel/UCpx_k19S2vUutWUUM9qmXEg",
-            "apple": "https://music.apple.com/us/artist/imagine-dragons/358714030",
-            "spotify": "https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q",
-            "instagram": "https://www.instagram.com/imaginedragons/",
-            "website": "https://www.imaginedragonsmusic.com/",
-            "facebook": "https://www.facebook.com/ImagineDragons/",
-            "email": "https://www.imaginedragonsmusic.com/#mailing-list"
-        }
+        "biography": "Imagine Dragons is an American pop rock band from Las Vegas, Nevada, consisting of lead vocalist Dan Reynolds, lead guitarist Wayne Sermon, bassist Ben McKee, and drummer Daniel Platzman. The band gained exposure with the release of their debut studio album Night Visions in 2012, which resulted in the chart-topping singles 'It's Time' and 'Radioactive'. Imagine Dragons' music is known for its blend of rock, electronic, and pop elements."
+    },
+    "socials": {
+        "twitter": "https://twitter.com/Imaginedragons",
+        "youtube": "https://www.youtube.com/channel/UCpx_k19S2vUutWUUM9qmXEg",
+        "apple": "https://music.apple.com/us/artist/imagine-dragons/358714030",
+        "spotify": "https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q",
+        "instagram": "https://www.instagram.com/imaginedragons/",
+        "website": "https://www.imaginedragonsmusic.com/",
+        "facebook": "https://www.facebook.com/ImagineDragons/",
+        "email": "https://www.imaginedragonsmusic.com/#mailing-list",
+        "tiktok": "https://www.tiktok.com/@imaginedragons",
+        "merch": "https://shop.imaginedragonsmusic.com/",
+        "tour_dates": "https://www.imaginedragonsmusic.com/#tour",
+        "newsletter": "https://www.imaginedragonsmusic.com/#newsletter",
+        "bandcamp": "https://imaginedragons.bandcamp.com/",
+        "snapchat": "https://www.snapchat.com/add/imaginedragons",
+        "patreon": "https://www.patreon.com/imaginedragons"
     }
 }
