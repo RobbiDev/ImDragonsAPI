@@ -46,7 +46,7 @@ router.get('/album/:album', (req, res) => {
 
         Send(res, 202, result);
     } catch (err) {
-        Error(res, 500, 'Internal server error');
+        Error(res, 500, 'Internal server erro');
     }
 });
 
