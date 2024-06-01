@@ -63,13 +63,13 @@ router.get('/band/:content', (req, res) => {
         const subContent = Object.keys(ContentType);
 
         if (!subContent.includes(targetedContent)) {
-            return Error(res, 404, 'Content not found');
+            return Error(res, 404, 'Content not found!');
         }
 
         const subContentProps = ContentType[targetedContent];
         Send(res, 202, subContentProps);
     } catch (err) {
-        Error(res, 500, 'Internal server error');
+        Error(res, 500, 'Internal server error!');
     }
 });
 
