@@ -35,11 +35,11 @@ There are many different way to use and manipulate our API. Since its a open api
 
 Main API Route
 ```
-https://api.unnecessarylibraries.com/imdragons/v1/public
+https://api.imdragons.com/v2/
 ```
-Example of the ```/public/band``` endpoint.
+Example of the ```/albums``` endpoint.
 ```
-https://api.unnecessarylibraries.com/imdragons/v1/public/band
+https://api.imdragons.com/v2/albums
 ```
 
 API Route Response in JSON

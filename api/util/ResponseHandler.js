@@ -6,5 +6,3 @@ function Error(res, code) {
 function Send(res, code, obj) {
     res.status(code).json(obj)
 }
-
-module.exports = { Error, Send };
