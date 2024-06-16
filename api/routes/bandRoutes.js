@@ -16,7 +16,7 @@ function readFile() {
   return JSON.parse(fs.readFileSync(FilePath, 'utf8'))
 }
 
-// GET /albums - Get all albums
+// GET /band - Get all band details
 router.get('/', (req, res) => {
   try {
     const band = readFile()
@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
   }
 });
 
-// GET /albums - Get all albums
+// GET /band/:type - Get band details type
 router.get('/:type', (req, res) => {
 
   const type = req.params.type
@@ -36,7 +36,7 @@ router.get('/:type', (req, res) => {
     const data = band[`${type}`]
     Success(res, 200, data)
   } catch (err) {
-    Error(res, 404, "fu")
+    Error(res, 404, "The requested type of band details does not exist or could not be found.")
   }
 });
 
