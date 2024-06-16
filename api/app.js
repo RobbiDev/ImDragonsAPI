@@ -1,7 +1,9 @@
-
+// Imports
 import express from 'express';
 
 import albumRoutes from './routes/albumRoutes.js';
+import songsRoutes from './routes/songsRoutes.js';
+import bandRoutes from './routes/bandRoutes.js';
 
 const app = express();
 
@@ -16,6 +18,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/v2/albums', albumRoutes);
+app.use('/v2/songs', songsRoutes);
+app.use('/v2/band', bandRoutes);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
