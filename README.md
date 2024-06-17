@@ -19,7 +19,7 @@
 Created on April 24th, 2021 by [RobbiDev](https://github.com/robbidev). ImDragonsAPI was created to give fans an all in one place for a fast, and constantly updating database of data regarding the band [Imagine Dragons](https://www.imaginedragonsmusic.com/#/). Instantly giving results back and no longer dealing with the painstaking process of copying and pasting websites/wikis!
 
 # 💻 The API
-ImDragonsAPI was also designed to be a beginner friendly tool for new aspiring developers. A public rest API anyone can use to start gaining skills within backend development. Thats why we developed our database with a very simple to use structure. 
+ImDragonsAPI was also designed to be a beginner friendly tool for new aspiring developers. A public and open source REST API anyone can use to start gaining skills within software development. Thats why we developed our database with a very simple to use structure. 
 
 Examples projects you can try:
 - Making a Discord Data bot that gives Information regarding the band
