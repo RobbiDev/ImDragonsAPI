@@ -263,5 +263,35 @@
             "Emma",
             "Easy"
         ]
+    },
+    {
+        "id": 8,
+        "title": "LOOM",
+        "length": "31:10",
+        "recorded": "2023 - 2024",
+        "label": [
+            "Interscope",
+            "KIDinaKORNER"
+        ],
+        "genre": [
+            "Pop-rock",
+            "Alternative rock"
+        ],
+        "released": "June 28, 2024",
+        "producers": [
+            "Robin Lennart Fredriksson",
+            "Mattias Larsson"
+        ],
+        "tracks": [
+            "Wake Up",
+            "Nice to Meet You",
+            "Eyes Closed",
+            "Take Me to the Beach",
+            "In Your Corner",
+            "Gods Don’t Pray",
+            "Don’t Forget Me",
+            "Kid",
+            "Fire in These Hills"
+        ]
     }
 ]
