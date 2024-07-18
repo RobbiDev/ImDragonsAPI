@@ -48,7 +48,7 @@ Example of the ```/band``` endpoint in JSON.
   "api": "ImDragonsAPI",
   "Status": 200,
   "data": {
-    "biography": "Imagine Dragons is an American pop rock band from Las Vegas, Nevada, consisting of lead vocalist Dan Reynolds, lead guitarist Wayne Sermon, bassist Ben McKee, and drummer Daniel Platzman. The band gained exposure with the release of their debut studio album Night Visions in 2012, which resulted in the chart-topping singles 'It's Time' and 'Radioactive'. Imagine Dragons' music is known for its blend of rock, electronic, and pop elements.",
+    "biography": "Imagine Dragons is an American pop rock band from Las Vegas, Nevada, consisting of lead vocalist Dan  Reynolds, lead guitarist Wayne Sermon, bassist Ben McKee, and drummer Daniel Platzman. The band gained exposure with the release of their debut studio album Night Visions in 2012, which resulted in the chart-topping singles 'It's Time' and 'Radioactive'. Imagine Dragons' music is known for its blend of rock, electronic, and pop elements.",
     "origin": "Las Vegas, Nevada, United States",
     "formation_year": 2008,
     "active_years": "2008-present",
