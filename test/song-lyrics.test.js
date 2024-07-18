@@ -1,4 +1,5 @@
-import song from "../api/data/songs/EVOLVE_1_I_Dont_know_Why.json" assert { type: "json" }
+// Testing for Accuracy of Lyrics and way its displayed
+import song from "../api/data/songs/EVOLVE_9_Thunder.json" assert { type: "json" }
 
 function output(lyrics){
 
