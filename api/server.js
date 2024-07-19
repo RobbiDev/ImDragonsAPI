@@ -6,5 +6,5 @@ const port = config.PORT;
 const server = http.createServer(app);
 
 server.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`API is running on port Localhost:${port}\nAPI URL: `);
 });
