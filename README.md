@@ -84,7 +84,7 @@ See our dedicated website for our documentation, or you can view our documentati
 
 | Language   | Name         | Version | Link  |
 | ---------- | ------------ | ------- | ------|
-| Javascript | ImDragons.JS | v1.0.2  | [Click Here](https://github.com/RobbiDev/imagine-dragons.js)|
+| Javascript | ImDragons.JS |   WIP   | [Click Here](https://github.com/RobbiDev/imagine-dragons.js)|
 
 Want to help expand our supported libraries? Don't be afraid to develop your own library, or contribute to existing libraries. Look at our contributing policy to learn more about adding your own additions!
 
